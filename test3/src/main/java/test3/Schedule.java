@@ -1,3 +1,4 @@
+package test3;
 import java.util.Scanner;
 
 public class Schedule {
@@ -26,8 +27,7 @@ public class Schedule {
                 TL.PrintAllList();
                 System.out.println("请输入要删除的计划的序号:");
                 list = in.nextLine();
-                int k = Integer.parseInt(list);
-                TL.deleteThing(k);
+                TL.deleteThing(list);
             }else if(cmd.equals("change")) {
                 if(TL.checkIsEmpty()){
                     System.out.println("暂无可更改的计划，请重新输入指令");
@@ -35,8 +35,8 @@ public class Schedule {
                 }
                 TL.PrintAllList();
                 System.out.println("请输入要更改的计划的序号:");
-                int k = in.nextInt();
-                TL.changeToFinish(k);
+                list = in.nextLine();
+                TL.changeToFinish(list);
             }else{
                 System.out.println("命令输入错误，请重新输入");
             }

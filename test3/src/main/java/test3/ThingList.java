@@ -1,3 +1,4 @@
+package test3;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -16,14 +17,14 @@ public class ThingList {
         // System.out.println("Add List Finish!");
     }
 
-    public List<String> deleteThing(int k){
+    public List<String> deleteThing(String str){
         if(notFinishList.size() == 0){
         //    System.out.println("未完成的项目中不包含此项目，请检查输入是否正确");
         }else if(notFinishList.size() < k){
         //    System.out.println("未完成的项目不包含此序列，请重新输入");
-            return null;
+            return notFinishList;
         }else{
-            notFinishList.remove(k-1);
+            notFinishList.remove(str);
         }
         return notFinishList;
         // PrintAllList();
@@ -31,15 +32,14 @@ public class ThingList {
     }
 
 
-    public List<String> changeToFinish(int k){
+    public List<String> changeToFinish(String str){
         if(notFinishList.size() == 0){
         //    System.out.println("未完成的项目中不包含此项目，请检查输入是否正确");
         }else if(notFinishList.size() < k){
         //    System.out.println("未完成项目中没有此序号，请重新输入");
             return null;;
         }else{
-            String str = notFinishList.get(k-1);
-            notFinishList.remove(k-1);
+            notFinishList.remove(str));
             haveFinishList.add(str);
         }
         return haveFinishList;
@@ -66,4 +66,3 @@ public class ThingList {
     }
     
 }
-
