@@ -64,4 +64,5 @@ public class ThingList {
     public boolean checkIsEmpty(){
         return notFinishList.isEmpty();
     }
+    
 }
